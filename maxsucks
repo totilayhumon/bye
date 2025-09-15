@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <title>Vanishing Bubbles</title>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Set up the sky -->
+            <a-sky color="cornflowerblue"></a-sky>
+            
+            <!-- Set up the camera and cursor -->
+            <a-camera>
+                <a-cursor fuse="true" fuse-timeout="1500"></a-cursor>
+            </a-camera>
+            
+            <!-- Ground Plane -->
+            <a-plane rotation="-90 0 0" width="100" height="100" color="darkolivegreen"></a-plane>
+
+            
+            <!-- First Bubble -->
+            <a-sphere
+    position="-10 10 -3"
+    radius="0.5"
+    color="aquamarine"
+    animation="
+        property: visible;
+        from: true;
+        to: false;
+        dur:1000;
+        startEvents:click
+        
+    "
+></a-sphere>
+            
+            <!-- Second Bubble -->
+            <a-sphere
+    position="2 7 -3"
+    radius="0.5"
+    color="darkseagreen"
+    animation="
+        property: visible;
+        from: true;
+        to: false;
+        dur:1000;
+        startEvents: click
+        
+    "
+></a-sphere>
+            
+            <!-- Third Bubble -->
+            <a-sphere
+    position="5 3 -3"
+    radius="0.5"
+    color="plum"
+    animation="
+        property: visible;
+        from: true;
+        to: false;
+        dur:1000;
+        startEvents: click
+        
+    "
+></a-sphere>
+            
+        </a-scene>
+    </body>
+</html>
